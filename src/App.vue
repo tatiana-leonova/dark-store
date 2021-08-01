@@ -1,28 +1,38 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <main class="main-page">
+      <first-block></first-block>
+      <benefits-block></benefits-block>
+      <video-block></video-block>
+      <purchases-block></purchases-block>
+    </main>
+    <page-footer></page-footer>
+    <button-scroll-top></button-scroll-top>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import FirstBlock from "./components/FirstBlock.vue";
+import BenefitsBlock from "./components/BenefitsBlock.vue";
+import VideoBlock from "./components/VideoBlock.vue";
+import PurchasesBlock from "./components/PurchasesBlock.vue";
+import PageFooter from "./components/PageFooter.vue";
+import ButtonScrollTop from "./components/ButtonScrollTop.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    "first-block": FirstBlock,
+    "benefits-block": BenefitsBlock,
+    "video-block": VideoBlock,
+    "purchases-block": PurchasesBlock,
+    "page-footer": PageFooter,
+    "button-scroll-top": ButtonScrollTop,
   },
 };
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.main-page {
 }
 </style>
