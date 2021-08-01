@@ -1,5 +1,4 @@
 <template>
-  <transition name="modal">
     <div class="modal">
       <div class="modal__wrapper">
         <div class="modal__container">
@@ -27,7 +26,6 @@
         </div>
       </div>
     </div>
-  </transition>
 </template>
 
 <script>
@@ -106,18 +104,5 @@ export default {
       opacity: 0.5;
     }
   }
-}
-
-.modal-enter {
-  opacity: 0;
-}
-
-.modal-leave-to {
-  opacity: 0;
-}
-
-.modal-enter,
-.modal-leave-active {
-  transition: opacity 0.5s;
 }
 </style>

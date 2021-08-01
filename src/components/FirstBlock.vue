@@ -2,13 +2,8 @@
   <section class="first-block">
     <div class="first-block__wrapper">
       <div class="container">
-        <img
-          class="first-block__logo"
-          src="@/assets/image/logo.svg"
-          width="100"
-          height="27"
-          alt="logo Vprok"
-        />
+        <logo-icon class="first-block__logo">
+        </logo-icon>
         <div class="first-block__content">
           <h1>Что такое даркстор?</h1>
           <p>
@@ -18,8 +13,8 @@
           </p>
         </div>
         <swipe-down
-          class="first-block__swipe-down"
-          :link="linkSwipe"
+            class="first-block__swipe-down"
+            :link="linkSwipe"
         ></swipe-down>
         <div></div>
       </div>
@@ -28,19 +23,21 @@
 </template>
 
 <script>
+import LogoIcon from "@/components/LogoIcon.vue";
 import SwipeDown from "@/components/SwipeDown.vue";
 
 export default {
   name: "FirstScreen",
   components: {
-    "swipe-down": SwipeDown,
+    "logo-icon": LogoIcon,
+    "swipe-down": SwipeDown
   },
 
   data() {
     return {
-      linkSwipe: "#purchases",
+      linkSwipe: "#purchases"
     };
-  },
+  }
 };
 </script>
 
@@ -52,11 +49,11 @@ export default {
     color: $color_white;
     background-color: $color_bg_dark;
     background: linear-gradient(
-        110.87deg,
-        #293e42 43.41%,
-        rgba(24, 60, 67, 0) 86.15%
-      ),
-      url("~@/assets/image/promo.jpg");
+            110.87deg,
+            #293e42 43.41%,
+            rgba(24, 60, 67, 0) 86.15%
+    ),
+    url("~@/assets/image/promo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 40px 0;
@@ -70,6 +67,8 @@ export default {
   &__logo {
     display: block;
     margin: 0 auto 70px auto;
+    width: 100px;
+    height: 27px;
 
     @media (min-width: $width-md) {
       width: 150px;

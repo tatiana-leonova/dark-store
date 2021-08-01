@@ -1,24 +1,21 @@
 <template>
   <footer class="page-footer">
     <div class="container">
-      <img
-        class="page-footer__logo"
-        src="@/assets/image/logo.svg"
-        width="130"
-        height="37"
-        alt="logo Vprok"
-      />
+      <logo-icon class="page-footer__logo">
+      </logo-icon>
       <div class="page-footer__contact-wrapper">
         <contact-information
-          class="page-footer__contact-information"
+            class="page-footer__contact-information"
         ></contact-information>
-        <social-media class="page-footer__social-media"></social-media>
+        <social-media class="page-footer__social-media">
+        </social-media>
       </div>
     </div>
   </footer>
 </template>
 
 <script>
+import LogoIcon from "@/components/LogoIcon.vue";
 import ContactInformation from "@/components/ContactInformation.vue";
 import SocialMedia from "@/components/SocialMedia.vue";
 
@@ -26,9 +23,10 @@ export default {
   name: "PageFooter",
 
   components: {
+    "logo-icon": LogoIcon,
     "contact-information": ContactInformation,
-    "social-media": SocialMedia,
-  },
+    "social-media": SocialMedia
+  }
 };
 </script>
 
@@ -40,6 +38,11 @@ export default {
 
   @media (min-width: $width-xl) {
     padding: 45px 0;
+  }
+
+  &__logo {
+    width: 130px;
+    height: 37px;
   }
 
   &__contact-wrapper {
