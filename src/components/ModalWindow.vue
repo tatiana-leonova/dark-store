@@ -1,31 +1,30 @@
 <template>
-    <div class="modal">
-      <div class="modal__wrapper">
-        <div class="modal__container">
-          <div v-if="!flag">
-            <div class="modal__header">
-              <slot name="header"> default header </slot>
-            </div>
-            <div class="modal__body">
-              <div>
-                <slot name="body"> </slot>
-              </div>
-              <slot name="footer"> </slot>
-            </div>
+  <div class="modal">
+    <div class="modal__wrapper">
+      <div class="modal__container">
+        <div v-if="!flag">
+          <div class="modal__header">
+            <slot name="header"></slot>
           </div>
-          <div v-else>
-            <slot name="success"></slot>
+          <div class="modal__body">
+            <div>
+              <slot name="body"></slot>
+            </div>
+            <slot name="footer"></slot>
           </div>
-          <button
+        </div>
+        <div v-else>
+          <slot name="success"></slot>
+        </div>
+        <button
             class="modal__default-button"
             @click="$emit('close')"
-            aria-label="Закрыть форму"
-          >
-            &#215;
-          </button>
-        </div>
+            aria-label="Закрыть форму">
+          &#215;
+        </button>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -36,21 +35,21 @@ export default {
     flag: {
       type: Boolean,
       default: true,
-      required: true,
-    },
-  },
+      required: true
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 .modal {
   position: fixed;
+  z-index: 30;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.9);
-  z-index: 30;
   transition: opacity 0.8s ease;
 
   &__wrapper {
@@ -64,12 +63,12 @@ export default {
   &__container {
     position: relative;
     width: 290px;
-    margin: 0 auto;
     padding: 40px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
     transition: all 0.8s ease;
+    margin: 0 auto;
 
     @media (min-width: $width-md) {
       width: 500px;
@@ -77,8 +76,8 @@ export default {
   }
 
   &__header h3 {
-    margin-top: 0;
     color: #42b983;
+    margin-top: 0;
   }
 
   &__body {
@@ -90,8 +89,8 @@ export default {
     top: 15px;
     right: 20px;
     @include text(50px, 50px);
-    border: none;
     background-color: inherit;
+    border: none;
     transition: all 0.5s ease;
     cursor: pointer;
 

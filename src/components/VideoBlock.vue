@@ -57,8 +57,8 @@ export default {
 <style lang="scss" scoped>
 .video-block {
   background-color: $color_bg_light;
-  margin: 0 auto;
   padding: 0 0 50px 0;
+  margin: 0 auto;
 
   @media (min-width: $width-md) {
     padding: 0 0 80px 0;

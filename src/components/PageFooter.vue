@@ -33,8 +33,8 @@ export default {
 <style lang="scss" scoped>
 .page-footer {
   padding: 45px 40px;
-  background-color: $color_bg_dark;
   color: $color_white;
+  background-color: $color_bg_dark;
 
   @media (min-width: $width-xl) {
     padding: 45px 0;

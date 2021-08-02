@@ -113,8 +113,8 @@ export default {
 
 <style lang="scss" scoped>
 .slider {
-  text-align: center;
   position: relative;
+  text-align: center;
 
   &__container {
     display: inline-block;
@@ -137,12 +137,12 @@ export default {
 
   &__item {
     position: relative;
-    border-radius: 10px;
     display: inline-block;
     vertical-align: top;
     width: 90vw;
     max-width: 450px;
     padding: 0 20px;
+    border-radius: 10px;
     background: $color_white;
 
     @media (min-width: $width-md) {
@@ -153,13 +153,13 @@ export default {
 
   &__number {
     display: block;
+    z-index: 1;
     position: absolute;
     top: 5px;
     left: 25px;
-    z-index: 1;
-    color: $color_accent;
     @include text(16px, 22px);
     font-weight: 700;
+    color: $color_accent;
 
     @media (min-width: $width-md) {
       @include text(22px, 32px);
@@ -224,9 +224,9 @@ export default {
 
   &__title {
     @include text(14px, 22px);
-    margin-top: 20px;
     position: relative;
-    color: #000;
+    color: $color_text;
+    margin-top: 20px;
 
     @media (min-width: $width-md) {
       @include text(16px, 24px);
@@ -250,14 +250,15 @@ export default {
   &__arrow {
     width: 20px;
     height: 20px;
-    border: none;
     background-color: inherit;
+    border: none;
     border-top: 3px solid $color_border;
     border-right: 3px solid $color_border;
-    margin-right: 50px;
     transition: 0.5s;
-    margin-top: 40px;
     cursor: pointer;
+    margin-top: 40px;
+    margin-right: 50px;
+
 
     @media (min-width: $width-xl) {
       width: 30px;

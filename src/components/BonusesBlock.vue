@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: "BonusesBlock",
+  name: "BonusesBlock"
 };
 </script>
 
@@ -35,16 +35,16 @@ export default {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 20px auto 50px auto;
     width: 900px;
+    margin: 20px auto 50px auto;
   }
 
   &__item {
     position: relative;
-    border: 1px solid $color_border;
-    padding: 25px;
     text-align: center;
     max-width: 450px;
+    padding: 25px;
+    border: 1px solid $color_border;
     margin: 20px auto 15px auto;
 
     @media (min-width: $width-xl) {
@@ -111,10 +111,10 @@ export default {
       background-color: $color_accent;
 
       @media (min-width: $width-xl) {
-        width: 70px;
-        height: 70px;
         top: -3px;
         left: 10px;
+        width: 70px;
+        height: 70px;
       }
     }
 
@@ -140,6 +140,7 @@ export default {
 
   &__item-text {
     margin: 5px 0;
+
     @media (min-width: $width-xl) {
       padding: 0 0 0 110px;
     }

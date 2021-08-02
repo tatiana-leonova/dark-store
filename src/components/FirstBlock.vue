@@ -47,6 +47,7 @@ export default {
 
   &__wrapper {
     color: $color_white;
+    padding: 40px 0;
     background-color: $color_bg_dark;
     background: linear-gradient(
             110.87deg,
@@ -56,7 +57,6 @@ export default {
     url("~@/assets/image/promo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 40px 0;
     clip-path: ellipse(100% 70% at 50% 30%);
 
     @media (min-width: $width-xl) {
@@ -66,9 +66,9 @@ export default {
 
   &__logo {
     display: block;
-    margin: 0 auto 70px auto;
     width: 100px;
     height: 27px;
+    margin: 0 auto 70px auto;
 
     @media (min-width: $width-md) {
       width: 150px;
@@ -83,8 +83,8 @@ export default {
 
   &__content {
     text-align: center;
-    padding: 0 20px;
     max-width: 500px;
+    padding: 0 20px;
     margin: 0 auto;
 
     @media (min-width: $width-md) {
@@ -126,8 +126,8 @@ export default {
       }
 
       @media (min-width: $width-xl) {
-        margin-top: 10px;
         width: 370px;
+        margin-top: 10px;
       }
 
       @media (min-width: $width-xxl) {

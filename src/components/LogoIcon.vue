@@ -39,7 +39,3 @@ export default {
   name: "LogoIcon"
 };
 </script>
-
-<style scoped>
-
-</style>

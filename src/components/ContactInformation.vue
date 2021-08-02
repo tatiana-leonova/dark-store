@@ -7,8 +7,7 @@
       <a
         class="contacts__phone"
         :href="'tel:' + contact.phone"
-        aria-label="Позвонить"
-      >
+        aria-label="Позвонить">
         {{ contact.phone | phoneFormats }}
       </a>
     </li>
@@ -69,13 +68,13 @@ export default {
   }
 
   &__phone {
+    position: relative;
     @include text(22px, 36px);
     font-weight: bold;
     color: $color_white;
     text-decoration: none;
-    transition: all 0.5s;
-    position: relative;
     padding-bottom: 7px;
+    transition: all 0.5s;
 
     &:after,
     &:before {
@@ -84,15 +83,15 @@ export default {
 
     &:after {
       position: absolute;
+      content: ".";
       bottom: 0;
       left: 0;
       right: 0;
-      margin: auto;
       width: 0%;
-      content: ".";
+      height: 2px;
       color: transparent;
       background: #aaa;
-      height: 2px;
+      margin: auto;
     }
 
     &:hover:after {

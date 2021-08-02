@@ -36,8 +36,7 @@
           class="purchase-modal__button button"
           type="button"
           @click.prevent.once="purchasesSubmit"
-          aria-label="Отправить форму"
-        >
+          aria-label="Отправить форму">
           Отправить
         </button>
       </template>
@@ -112,21 +111,21 @@ export default {
   position: relative;
 
   &__input {
+    opacity: 1;
+    @include text(20px, 32px);
+    color: $color_text;
     width: 100%;
     height: 70px;
+    padding: 0 20px;
     border: 2px solid $color_border;
     border-radius: 10px;
     transition: all 0.5s ease;
-    margin-bottom: 10px;
     outline: none;
-    @include text(20px, 32px);
-    color: $color_text;
-    padding: 0 20px;
-    opacity: 1;
+    margin-bottom: 10px;
 
     &::placeholder {
-      color: $color_text;
       opacity: 1;
+      color: $color_text;
     }
 
     &:hover,

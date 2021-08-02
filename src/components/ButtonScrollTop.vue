@@ -1,9 +1,9 @@
 <template>
   <a
-    @click="scrollTop"
-    v-show="visible"
-    class="button-top"
-    aria-label="Вернуться в начало страницы"
+      @click="scrollTop"
+      v-show="visible"
+      class="button-top"
+      aria-label="Вернуться в начало страницы"
   >
     &uarr;
   </a>
@@ -17,7 +17,7 @@ export default {
     return {
       visible: false,
       scrollSpeed: 100,
-      valueAppearanceButton: 350,
+      valueAppearanceButton: 350
     };
   },
 
@@ -32,14 +32,14 @@ export default {
     },
     scrollListener() {
       this.visible = window.scrollY > this.valueAppearanceButton;
-    },
+    }
   },
   mounted() {
     window.addEventListener("scroll", this.scrollListener);
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.scrollListener);
-  },
+  }
 };
 </script>
 
@@ -48,21 +48,21 @@ export default {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  cursor: pointer;
-  margin: 0 auto;
   font-size: 40px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 2px solid $color_accent;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 60px;
+  height: 60px;
   padding: 0;
-  color: white;
+  border-radius: 50%;
+  border: 2px solid $color_accent;
   background-color: $color_accent;
   outline: none;
   transition: 0.5s ease;
+  cursor: pointer;
+  margin: 0 auto;
 
   &:hover {
     color: $color_accent;
@@ -70,9 +70,9 @@ export default {
   }
 
   &:active {
-    background-color: $color_accent;
-    color: white;
     opacity: 1;
+    color: white;
+    background-color: $color_accent;
   }
 }
 </style>
